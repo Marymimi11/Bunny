@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Love Counter 💕</title>
+
+<style>
+    body {
+        background: linear-gradient(to right, #ffd6e7, #ffeef5);
+        text-align: center;
+        font-family: Arial;
+        margin-top: 100px;
+    }
+
+    h1 {
+        color: #ff4da6;
+        font-size: 40px;
+    }
+
+    #count {
+        font-size: 50px;
+        color: #ff66b2;
+        margin: 20px;
+    }
+
+    button {
+        padding: 15px 30px;
+        font-size: 20px;
+        background-color: #ff99cc;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #ff66b2;
+    }
+
+    #message {
+        margin-top: 20px;
+        font-size: 20px;
+        color: #cc0066;
+    }
+</style>
+
+</head>
+
+<body>
+
+<h1>Love Counter 💕</h1>
+
+<div id="count">0</div>
+
+<button onclick="addLove()">اضغطني 🥺</button>
+
+<div id="message"></div>
+
+<script>
+let count = 0;
+
+function addLove() {
+    count++;
+    document.getElementById("count").innerText = count;
+
+    let msg = "";
+
+    if (count == 1) msg = "احبك شوي 💗";
+    else if (count == 3) msg = "احبك اكثر 🐰";
+    else if (count == 5) msg = "مره مره 😭💖";
+    else if (count == 10) msg = "اوكي خلاص انا مهووسة فيك 💀💗";
+
+    document.getElementById("message").innerText = msg;
+}
+</script>
+
+</body>
+</html>
